@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="telefonos.css">
+    <link rel="stylesheet" href="tableta.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link rel="shortcut icon" href="./img/LogoSK.png" type="image/x-icon">
+</head>
+
+<body>
+
+    <header>
+        <div class="options">
+            <a href="https://mail.google.com/">Gmail</a>
+            <!--             <a href="https://www.google.com/search?q=&tbm=isch"
+                style="background-color: rgba(0, 0, 0, 0.9);">Imágenes</a> -->
+            <a href="#" onclick="toggleMenu()" id="menu" style="background-color: rgba(0, 0, 0, 0.9);"><span
+                    class="dots-logo"></span></a>
+            <a
+                href="https://accounts.google.com/SignOutOptions?hl=es&continue=https://www.google.com%3Fhl%3Des&ec=GBRA8wE"><img
+                    src="assets/user.png" alt=""></a>
+        </div>
+    </header>
+
+
+    <!-- APLICACIONES DEL MENU -->
+
+    <div class="menu2" id="menu2">
+        <a href="https://classroom.google.com/" target="_blank">
+            <div class="menu-item">
+                <img src="assets/classroom.svg" alt="">
+                <label>Classroom</label>
+            </div>
+        </a>
+        <a href="https://mail.google.com/mail/?authuser=0" target="_blank">
+            <div class="menu-item">
+                <img src="assets/gmail.png" alt="">
+                <label>Gmail</label>
+            </div>
+        </a>
+        <a href="https://translate.google.com/?authuser=0" target="_blank">
+            <div class="menu-item">
+                <img src="assets/traductor-logo.png" alt="">
+                <label>Traductor</label>
+            </div>
+        </a>
+        <a href="https://drive.google.com/?authuser=0" target="_blank">
+            <div class="menu-item">
+                <img src="assets/drive-logo.png" alt="">
+                <label>Drive</label>
+            </div>
+        </a>
+        <a href="https://maps.google.com/?authuser=0" target="_blank">
+            <div class="menu-item">
+                <img src="assets/maps-logo.jpg" alt="">
+                <label>Maps</label>
+            </div>
+        </a>
+        <a href="https://chrome.google.com/webstore/category/extensions?utm_source=app-launcher&authuser=0"
+            target="_blank">
+            <div class="menu-item">
+                <img src="assets/Chrome-Extensiones-Store-logo.png" alt="">
+                <label>Extensiones Store</label>
+            </div>
+        </a>
+        <a href="https://jorgedanielsk.github.io/primeraPaginaJorge/"
+            target="_blank">
+            <div class="menu-item">
+                <img src="assets/sk-logo.png" alt="">
+                <label>Mi primera pagina</label>
+            </div>
+        </a>
+    </div>
+
+
+    <!-- IMAGEN DE CENTRO DE GOOGLE -->
+    <div class="imagen-icono">
+        <img src="./img/LogoSK.png" alt="" width="350px">
+    </div>
+
+
+
+
+    <!-- button para la busqueda -->
+    <div class="input__container input__container--variant">
+        <div class="shadow__input shadow__input--variant"></div>
+        <input type="text" name="text" id="input2" class="query input__search input__search--variant"
+            placeholder="Ingresar una busqueda o URL">
+        <!-- BOTON DE BUSQUEDA -->
+        <button class="button">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                <path fill="none" d="M0 0h24v24H0z"></path>
+                <path fill="currentColor" d="M5 13c0-5.088 2.903-9.436 7-11.182C16.097 3.564 19 7.912 19 13c0 .823-.076 1.626-.22 2.403l1.94 1.832a.5.5 0 0 1 .095.603l-2.495 4.575a.5.5 0 0 1-.793.114l-2.234-2.234a1 1 0 0 0-.707-.293H9.414a1 1 0 0 0-.707.293l-2.234 2.234a.5.5 0 0 1-.793-.114l-2.495-4.575a.5.5 0 0 1 .095-.603l1.94-1.832C5.077 14.626 5 13.823 5 13zm1.476 6.696l.817-.817A3 3 0 0 1 9.414 18h5.172a3 3 0 0 1 2.121.879l.817.817.982-1.8-1.1-1.04a2 2 0 0 1-.593-1.82c.124-.664.187-1.345.187-2.036 0-3.87-1.995-7.3-5-8.96C8.995 5.7 7 9.13 7 13c0 .691.063 1.372.187 2.037a2 2 0 0 1-.593 1.82l-1.1 1.039.982 1.8zM12 13a2 2 0 1 1 0-4 2 2 0 0 1 0 
+                    4z">
+                </path>
+            </svg>
+            <span class="buscar" id="search">Iniciar Busqueda</span>
+        </button>
+    </div>
+
+
+    <!-- Datalist para mostrar las últimas búsquedas -->
+    <datalist id="busquedasRecientes"></datalist>
+
+
+
+    <!-- ICONOS DONDE SE PODRA ACCEDER POR MEDIO DE LINK -->
+
+
+    <div class="grid-container">
+        <a href="https://chat.openai.com/" target="_blank" onclick="editarEnlace(this)" data-id="enlace1"><img
+                src="./img/chat-gpt.png" alt="Imagen 1"></a>
+        <a href="https://www.twitch.tv/lkennykent" target="_blank" onclick="editarEnlace(this)" data-id="enlace2"><img
+                src="./img/twitch.png" alt="Imagen 2"></a>
+        <a href="https://www.youtube.com/" target="_blank" onclick="editarEnlace(this)" data-id="enlace3"><img
+                src="./img/youtube.png" alt="Imagen 3"></a>
+        <a href="https://github.com/login" target="_blank" onclick="editarEnlace(this)" data-id="enlace3"><img
+                src="./img/github-logo.png" alt="Imagen 3"></a>
+    </div>
+
+    <div class="agregarElementos">
+        <button class="btn2" id="agregar" onclick="agregar()">Agregar</button>
+    </div>
+
+
+
+    <!-- CODIGO DE LA ALERTA -->
+    <div class="alerta" id="alerta">
+        <div class="alert-content">
+            <h3 id="textoURL">Ingrese la URL de la página y la URL de la imagen:</h3> <br>
+            <input type="text" id="paginaURL" placeholder="URL de la página"> <br> <br>
+            <input type="text" id="imagenURL" placeholder="URL de la imagen"> <br> <br>
+            <button class="iniciar" onclick="ponerImagenConEnlace()">Agregar</button>
+            <button class="cancelar" id="cancelar" onclick="cancelar()">Cancelar</button>
+            <button class="editar" id="editar" onclick="editar()">Editar</button>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="alerta2" id="alerta2">
+        <div class="alert-contenido">
+            <!-- Contenido de la segunda alerta -->
+            <h2>Imágenes Agregadas</h2>
+            <div id="imagenesAgregadas"></div>
+
+            <button class="button" id="cancelar" onclick="cancelar2()">Cancelar</button>
+            <button class="btn3" id="okBtn" onclick="mostarLosCambios()"
+                style="background-color: red; color: white;">Guardar cambios</button>
+        </div>
+    </div>
+
+
+
+
+    <!--     <div class="login" id="login" onclick="inicio()">
+        <img src="img/user.png" alt="">
+    </div>
+
+    <div id="loginModal" class="modal">
+        <div class="modal-contentt">
+            <h2>¿Deseas iniciar sesión?</h2>
+            <button class="iniciar" onclick="iniciarSesion()">Sí</button>
+            <button class="cancelar" id="cancelar" onclick="cancelar()">Cancelar</button>
+        </div>
+    </div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!------------------------------------------>
+
+
+    <!-- BOTON PARA CAMBIAR EL FONDO -->
+
+    <div class="image-containerr">
+        <img src="assets/EditarImagen-logo.png" width="50px" class="imagenFondo" id="backgroundImg"
+            alt="Cambiar fondo de página">
+        <label class="label">Editar Fondo</label>
+    </div>
+
+
+
+
+
+    <script src="./code/script.js"></script>
+    <script src="./code/search.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,214 @@
+@media (max-width: 768px) {
+
+    body {
+        height: 100vh;
+    }
+
+    header {
+        position: absolute;
+        top: 3%;
+        left: 78%;
+        transform: translate(-50%, -50%);
+    }
+
+    header .options {
+        display: flex;
+        align-items: center;
+        /*ES LA SEPARACION DE LOS ELEMENTOS DEL HEADER */
+        gap: 20px;
+        /* background-color: indigo; */
+    }
+
+    .menu2 {
+        position: absolute;
+        top: 32%;
+        left: 68%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        width: 53%;
+        height: auto;
+        border-radius: 25px;
+        z-index: 9999;
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px;
+        justify-content: center;
+        /* Centra los elementos horizontalmente */
+        align-items: center;
+    }
+
+    .menu2 a {
+        font-size: 12px;
+        display: none;
+    }
+
+    .menu2 img {
+        border-radius: 50%;
+        width: 25px;
+        height: auto;
+        padding: 10px;
+    }
+
+
+    /* BOTON PARA CAMBIAR EL FONDO */
+
+    .image-containerr {
+        display: flex;
+        position: absolute;
+        top: 1%;
+        left: 10%;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: center;
+
+    }
+    
+    .imagenFondo {
+        margin-left: -15px;
+        background-color: white;
+    }
+    
+    .label {
+        background-color: black;
+        font-size: 12px;
+        white-space: nowrap;
+        color: white;
+        margin-top: -22px;
+        margin-left: 45px;
+    }
+
+    
+
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr);
+        /* Cambiar la cantidad de columnas a 2 */
+        top: 85%;
+        /* Ajustar la posición vertical */
+    }
+
+    .grid-container img {
+        width: 65px;
+    }
+
+    .imagen-icono {
+        top: 20%;
+        /* Ajustar la posición vertical */
+    }
+
+    .input__container--variant {
+        max-width: 95%;
+        /* Ajustar el ancho del contenedor */
+    }
+
+    .input__search--variant {
+        width: 15em;
+        /* Ajustar el ancho del input */
+    }
+
+    .fila-imagenes {
+        grid-template-columns: repeat(2, 1fr);
+        /* Cambiar la cantidad de columnas a 2 */
+    }
+
+    /* Ajustes para los botones en las alertas */
+    .alert-content button {
+        padding: 8px 16px;
+        /* Ajustar el tamaño del botón */
+    }
+
+    /* Ajustes para los tamaños de fuente */
+    .alert-content h2 {
+        font-size: 18px;
+    }
+
+    .button {
+        font-size: 15px;
+    }
+
+    /* Ajustes para las imágenes en las alertas */
+    .imagen-agregada img,
+    .fila-imagenes img {
+        width: 30px;
+        /* Ajustar el tamaño de las imágenes */
+    }
+
+    /* PRIMERA ALERTA */
+
+    .alert-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 65%;
+        background-color: #fff;
+        /*     width: 30%; */
+        padding: 30px 50px;
+        border-radius: 5px;
+        text-align: center;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        /* Agrega sombra */
+        transition: transform 0.3s ease-in-out;
+    }
+
+
+    /* SEGUNDA ALERTA */
+    .alert-contenido {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 65%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        /*     width: 30%; */
+        padding: 30px 50px;
+        border-radius: 5px;
+        text-align: center;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        /* Agrega sombra */
+        transition: transform 0.3s ease-in-out;
+    }
+
+
+    .input__container--variant {
+        background: linear-gradient(to bottom, #98ffcbb8, #89fbc2b5);
+        border-radius: 1.5em;
+        /* CON ESTE SE PODRA SABER EL ANCHO DEL CONTENEDOR */
+        max-width: 85%;
+        padding: 1em;
+        box-shadow: 1em 1em 1em #005041;
+    }
+
+    .input__search--variant::placeholder {
+        color: #000000;
+        opacity: 0.7;
+    }
+
+
+    .input__search--variant {
+        /* CON ESTE LIMITA EL TEXTO DENTRO DEL INPUT */
+        width: 15em;
+        align-items: center;
+        border-radius: 13em;
+        outline: none;
+        border: none;
+        padding: 0.8em;
+        font-size: 1.2em;
+        color: #002019;
+        background-color: transparent;
+    }
+
+}
+
+
+
+
+
+/* CODIGO PARA DISPOSITIVOS MAS CHICOS */
+@media screen and (min-width: 399px) and (max-width: 694px) {
+
+    .menu2 {
+        top: 28%;
+    }
+
+}
